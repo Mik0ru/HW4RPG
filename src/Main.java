@@ -59,7 +59,8 @@ public class Main {
         for (int i = 0; i < heroesHealth.length; i++) {
             if (Stun) {
                 StunCooldown = true;
-                System.out.println("Boss is stunned");
+                Stun = false;
+                System.out.println("Boss is stunned , no attack");
                 break;
             }
             if (heroesAttackType[i].equals("LuckyShot")) {
@@ -136,7 +137,7 @@ public class Main {
                     Random random = new Random();
                     Stun = random.nextBoolean();
                     if (Stun) {
-                        System.out.println("Boss was stunned by Thor!!!");
+                        System.out.println("Boss was stunned by Thor for the next round!!!");
                     }
                 }
                 int damage = heroesDamage[i];
